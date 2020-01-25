@@ -19,7 +19,7 @@ namespace pythagoream_theorem
              * check 3 4 = 5
              * check 6 8 = 10
              * check 16 17 = 23.345*/
-            Console.Write("Enter the value of the base:\t");
+            Console.Write("Enter the value of the base:\n");
             string inputBase = Console.ReadLine();
             double baseValue = double.Parse(inputBase);
 
