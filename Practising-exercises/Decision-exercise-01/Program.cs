@@ -16,13 +16,20 @@ namespace Decision_exercise_01
             Console.Write("Enter your number:");
             inputValue = Console.ReadLine();
             number = double.Parse(inputValue);
-            if (number>=0)
+            if (number == 0)
             {
-                Console.WriteLine($"Your number {number} is possitive");
+                Console.WriteLine($"Your number {number} is zero");
             }
             else
             {
+                if (number>0)
+                {
+                Console.WriteLine($"Your number {number} is possitive");
+                }
+                else
+                {
                 Console.WriteLine($"Your number {number} is negative");
+                }
             }
             Console.ReadLine();
             //Exercise-02
@@ -32,21 +39,21 @@ namespace Decision_exercise_01
             inputAge = Console.ReadLine();
             age = double.Parse(inputAge);
 
-            if (age <=6)
+            if (age < 7)
             {
-                msg = "Free";
+                msg = "Your admission fee is Child Free";
             }
-            else if ( age >= 7 && age <=17)
+            else if ( age < 18)
             {
-                msg = "$9.80";
+                msg = "Your admission fee is Student $9.80";
             }
-            else if (age >= 18 && age <= 54)
+            else if (age < 55)
             {
-                msg = "$11.35";
+                msg = "Your admission fee is Adult $11.35";
             }
             else
             {
-                msg = "$10.00";
+                msg = "Your admission fee is Senior $10.00";
             }
             Console.WriteLine(msg);
             Console.ReadLine();
@@ -61,15 +68,15 @@ namespace Decision_exercise_01
             {
                 grademsg = "Your Grade is F";
             }
-            else if (mark >= 50 && mark <= 69)
+            else if  (mark <= 69)
             {
                 grademsg = "Your Grade is D";
             }
-            else if (mark >= 70 && mark <= 79)
+            else if (mark <= 79)
             {
                 grademsg = "Your Grade is C";
             }
-            else if (mark >= 80 && mark <= 89)
+            else if (mark <= 89)
             {
                 grademsg = "Your Grade is B";
             }
@@ -81,24 +88,59 @@ namespace Decision_exercise_01
             Console.ReadLine();
             //Exercise04
             string inputIncome;
-            double tax, income;
+            double Income;
+            decimal taxAmount;
             Console.Write("Enter your taxable income:");
             inputIncome = Console.ReadLine();
-            income = double.Parse(inputIncome);
-
-            if ( income <=50000)
+            Income = double.Parse(inputIncome);
+            const decimal FIVEPERCENTS = 0.05m;
+            const decimal SEVENPERCENTS = 0.07m;
+            const decimal NINEPERCENTS = 0.09m;
+             //using column aligned output 
+            //the syntax for formatting {variable, columnsize:formatstring}
+            //variable is the data to output 
+            //columnsize is the number of character spacing to be used for
+            //  the column 
+            //positive columnsize is right aligned
+            //negative columnsize is left aligned
+            //formatstring is your string format 
+            //put out the tax table as a column formatted table
+            //using a \t character will give columns depending on the length
+            //of your output string (inconsistent)
+            Console.WriteLine("Taxable Income \t Tax Calculation");
+            Console.WriteLine("Up to $50000 \t $0+5% amount over 0");
+            Console.WriteLine("Up to $100000 \t $2500+7% amount over $50000");
+            Console.WriteLine("$100000 and over \t $6000+9% amount over $100000");
+            if ( Income <= 50000)
             {
-                tax = 0 + 5 / 100 * income;
+                //taxAmount is decimal
+                //Earnings is a double
+                //the compile does not like a mixture
+                //solution: a) make Earnings a decimal
+                //          b) make everything a double
+                //          c) cast the Earnings temporarily to a decimal ****
+                //you can use the # sign as a digit placeholder in your format
+                //the # sign is ise as "if digit space needed, use it"
+                taxAmount = ((decimal)Income)*FIVEPERCENTS;
             }
-            else if (income <=100000)
+           
+            else if (Income <= 100000)
             {
-                tax = 2500 + 7 / 100 * income;
+                taxAmount = 2500.00m + (decimal)(Income-50000)*SEVENPERCENTS;
             }
             else
             {
-                tax = 6000 + 9 / 100 * income;
+                taxAmount = 6000.00m + (decimal)(Income-100000)*NINEPERCENTS;
             }
-            Console.WriteLine($"Your income tax is ${tax}");
+            //dollar amounts can be done with 
+            // a) formatting using 0.00 (without $) or $0.00 (with $)
+            // b) a small c (currency) will have an automatic $
+            Console.WriteLine($"Earning: {Income:$#,##0.00}. Taxes {taxAmount:$0.00}");
+            //output using column printing 
+            Console.WriteLine("{0,13} {1,15}","Earnings:","Taxes");
+            Console.WriteLine($"{Income,13:$#,###.00} {taxAmount,15:c}");
+            Console.WriteLine("\n");
+            Console.WriteLine($"Earning: {Income:c}. Your income tax is {taxAmount:c}");
             Console.ReadLine();
         }
     }
