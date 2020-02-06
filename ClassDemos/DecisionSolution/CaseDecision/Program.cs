@@ -117,6 +117,49 @@ namespace CaseDecision
             }//eos
             Console.WriteLine($"Your grade letter ({gradeLetter}) is {percentageRange}");
             Console.ReadKey();//When using debugging to spot the auto closing 
+
+            //example 2
+            int monthNumber =4;
+            
+            //there is a single argument variable
+            //this single argument variable will be tested against multiple
+            //  constant values
+            //The case test is an == test
+            //The case test is an == test ONLY
+            switch (monthNumber)
+            {
+                case 1;
+                    {
+                        //do any logic that is required when monthNumber is 1
+                        //this could be one line of code or 10000 lines of code
+                        Console.WriteLine("the name of the mpnth is January");
+}                   break;
+                    }
+                case 1;
+                    {
+                        //do any logic that is required when monthNumber is 1
+                        //this could be one line of code or 10000 lines of code
+                        Console.WriteLine("the name of the mpnth is January");
+}                   break;
+                    }
+                case 1;
+                    {
+                        //do any logic that is required when monthNumber is 1
+                        //this could be one line of code or 10000 lines of code
+                        Console.WriteLine("the name of the mpnth is January");
+}                   break;
+                    }
+                default:
+                    {
+                        //do any logic that is required when the monthNumber is 1
+                        //this could be one line of code or 10000 lines of code
+                         Console.WriteLine("the name of the mpnth is January");
+}                   break;
+                    }
+}           }
+
+
+
         }
 
     }
