@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterations-PreTest", "Itera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iteration-PostTest", "Iteration-PostTest\Iteration-PostTest.csproj", "{6352863C-0A32-4BD8-AA07-62F021AE433D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForLoop", "ForLoop\ForLoop.csproj", "{6E13EC41-BE58-415B-9EC1-A8B0880A1CE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6352863C-0A32-4BD8-AA07-62F021AE433D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6352863C-0A32-4BD8-AA07-62F021AE433D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6352863C-0A32-4BD8-AA07-62F021AE433D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E13EC41-BE58-415B-9EC1-A8B0880A1CE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E13EC41-BE58-415B-9EC1-A8B0880A1CE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E13EC41-BE58-415B-9EC1-A8B0880A1CE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E13EC41-BE58-415B-9EC1-A8B0880A1CE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
