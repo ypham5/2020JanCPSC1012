@@ -72,10 +72,9 @@ namespace NestedLoop
                     {
                         Console.WriteLine($"{number} is an invalid. Try again.\n\n");
                     }
-                    Console.ReadLine();
                 
                 }
-            }
+            }//eol while
         }
     }
 }

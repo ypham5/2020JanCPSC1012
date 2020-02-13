@@ -40,11 +40,20 @@ namespace MenuLoop
                         }
                     case "B":
                         {
+                            //place the heads or tails game in this case
+                            //validate that an H or T was entered, if not repeat query for input
                             Console.WriteLine("Your entered menu option choice of B \n\n");
                             break;
                         }
                     case "C":
                         {
+                            //the sum of squares
+                            //enter positive integer number (validate)
+                            //loop n times where n is the integer number (1 to n)
+                            //within the loop your calculation is total += loopnumber * loopnumber
+                            //after the loop display your integer number and its sum of squares
+                            //entered 4
+                            //loop 4 times 1) 1*1 2) 2*2 3) 3*3 4) 4*4 final total = 30
                             Console.WriteLine("Your entered menu option choice of C \n\n");
                             break;
                         }
