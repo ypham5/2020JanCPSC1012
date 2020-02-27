@@ -57,12 +57,19 @@ namespace MenuLoop
                         {
                             //the sum of squares
                             //enter positive integer number (validate)
-                            //loop n times where n is the integer number (1 to n)
-                            //within the loop your calculation is total += loopnumber * loopnumber
-                            //after the loop display your integer number and its sum of squares
-                            //entered 4
-                            //loop 4 times 1) 1*1 2) 2*2 3) 3*3 4) 4*4 final total = 30
-                            Console.WriteLine("Your entered menu option choice of C \n\n");
+                            
+                            //create a shared input method to obtain a integer value
+                            int number = GetIntegerInput("Enter a number greater than 0");
+                            if (number <1)
+                            {
+                                Console.WriteLine($"{number} is not greater than 0. Unable to do Sum of Squares");
+                            }
+                            else
+                            {
+                                int sumofsquares = 0;
+                                sumofsquares = SumofSquares(number);
+                                Console.WriteLine($"{sumofsquares} is the sum of squares for {number}");
+                            }
                             break;
                         }
                     case "X":
@@ -147,35 +154,75 @@ namespace MenuLoop
         }//eom
         static public void  Even_Or_Odds()
         {
-            int evenNumbers = 0;
-            int oddNumbers = 0;
-            string inputNumber;
-            int number;
-            const int TWO = 2;
+            int number = -1;
 
-            int loopCounter = 1;
-            while (loopCounter <=7)
+            while (number != 0)
             {
-                Console.Write("Enter the number: ");
-                inputNumber = Console.ReadLine();
-                number = int.Parse(inputNumber);
-                if ((number % TWO) == 0)
+                //do
+                //{
+                //    Console.Write("Enter a positive whole number OR enter 0 to quit.");
+                //    inputString = Console.ReadLine();
+                //}
+
+                number = GetIntegerInput("Enter a positive whole number OR enter 0 to quit.");
+
+            if (number > 0)
+            {
+                if (number % 2 == 0)
                 {
-                    //evenNumbers = evenNumbers + 1;
-                    evenNumbers++; //running total
+                    Console.WriteLine($"{number} is an even value. \n\n");
                 }
                 else
                 {
-                    //oddNumbers = oddNumbers + 1;
-                    oddNumbers += 1; //running total
-                }//eof
+                    Console.WriteLine($"{number} is an odd value. \n\n");
+                }
+            }
+            else
+            {
+                if (number == 0)
+                {
+                    Console.WriteLine($"Thank you. Come again. \n\n");
+                }
+                else
+                {
+                    Console.WriteLine($"{number} is invalid. Try again. \n\n");
+                }
+            }
+        }//eow
+        }//SUBROUNTINES is the method is not return anything function is the method is return something//eom Even_Or_Odd 
 
-                //increment the loop counter 
-                loopCounter++;
-            }//eol
+        static public int SumofSquares(int seednumber)
+        {
+            //loop n times where n is the integer number (1 to n)
+            //within the loop your calculation is total += loopnumber * loopnumber
+            //after the loop display your integer number and its sum of squares
+            //entered 4
+            //loop 4 times 1) 1*1 2) 2*2 3) 3*3 4) 4*4 final total = 30
+            int finalsquare = 0;
+            for(int loopcounter = 1; loopcounter <= seednumber; loopcounter++)
+            {
+                finalsquare += loopcounter * loopcounter;
+            }
+            return finalsquare;
+        }
 
-            Console.WriteLine($"\nThe even number count is {evenNumbers}");
-            Console.WriteLine($"The odd number count is {oddNumbers}\n\n");
-        }//eom Even_Or_Odd
+        static public int GetIntegerInput(string promptline)
+        {
+            bool validFlag = false;
+            string inputString = "";
+            int number = 0;
+                do
+                {
+                    Console.Write(promptline);
+                    inputString = Console.ReadLine();
+                    if (int.TryParse(inputString, out number))
+                    {
+                        validFlag = true;
+                    }
+                } while (validFlag == false);
+            //if your metohd indicates that a return datatype is specified
+            //you MUST have at least one return statement in your method code
+            return number;
+        }
     }
 }
