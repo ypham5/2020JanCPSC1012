@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29209.62
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileIO", "FileIO\FileIO.csproj", "{E54CC2A9-7620-490D-9A4C-CF8A6E25FA6A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwoColumnFile", "TwoColumnFile\TwoColumnFile.csproj", "{9BDAE47B-BA56-4E07-81C0-F8BBEC44B54B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E54CC2A9-7620-490D-9A4C-CF8A6E25FA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E54CC2A9-7620-490D-9A4C-CF8A6E25FA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E54CC2A9-7620-490D-9A4C-CF8A6E25FA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BDAE47B-BA56-4E07-81C0-F8BBEC44B54B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BDAE47B-BA56-4E07-81C0-F8BBEC44B54B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BDAE47B-BA56-4E07-81C0-F8BBEC44B54B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BDAE47B-BA56-4E07-81C0-F8BBEC44B54B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
