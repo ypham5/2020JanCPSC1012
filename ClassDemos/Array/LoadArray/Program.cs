@@ -25,6 +25,8 @@ namespace LoadArray
             int[] physicallyDecleared = new int[7];
 
             //b) the elements to initialize the array 
+            // the datatype after the new is optional BUT the value given 
+            // MUST match the receiving array declaration datatype.
             int[] diceValue = new int[] { 11, 212, 33, 41, 45, 6 };
 
             //the physically declared array has an initial default 
