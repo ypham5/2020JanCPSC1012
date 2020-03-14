@@ -16,8 +16,8 @@ namespace RandomGen
         //static Random rnd = new Random(); if you wanna random outside must go with static
         static void Main(string[] args)
         {
-            //Random is a datatype of class (oject)
-            //Random is just the definition of the object (decribes the ojbect)
+            //Random is a datatype of class (object)
+            //Random is just the definition of the object (decribes the object)
             //Random is NOT a physical instance of the object
             //To get a physical instance of the object use the keyboard new
             //new is used by any object to create an instance of that object 

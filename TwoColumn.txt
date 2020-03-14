@@ -1,4 +1,7 @@
-34, 8.5
-24, 6
-30, 7.5
-20, 5
+AJ ,34
+Trump ,6
+Trudeau ,72
+Putin ,51
+UnJoon ,67
+William ,98
+Sam ,45
